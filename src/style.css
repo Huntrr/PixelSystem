@@ -1,0 +1,539 @@
+/*
+Theme Name: PixelSystem
+Theme URI: http://HunterLightman.com
+Description: Custom theme for HunterLightman.com
+Author: Hunter Lightman
+Author URI: http://HunterLightman.com/
+Version: 1.0
+Tags: stars, js, javascript, animated, 8-bit
+
+License: NO TOUCHY
+License URI:
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+/* Standard setup */
+* {  
+ margin:0;  
+ padding:0; 
+}   
+
+html {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color:#ffffff;
+	background-color:#0e1d3b;
+
+	/* cover image */
+	background: url(img/background.png) no-repeat center center fixed; 
+ 	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/desk.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/desk.png', sizingMethod='scale')";
+}
+
+body {
+	margin: auto;
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	font-size: 72px;
+	text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+	padding-top: 0px;
+	color: #ffffff;
+}
+#page-header h1 {
+	padding-left: 208px;
+	padding-right: 62px;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 28px;
+}
+h4 {
+	font-weight: normal;
+}
+
+/* components */
+#page-header {
+	margin-top: 30px;
+	text-align: center;
+	width:100%;
+	height:200px;
+	display: block;
+}
+
+#home-header {
+	text-align: center;
+	width: 100%;
+	height: 200px;
+	display:block;
+	position: fixed;
+	top: 130px;
+}
+
+#sidebar {
+	float: left;
+	height: 100%;
+	width: 208px;
+	margin-right: 10px;
+}
+
+#main {
+	float: left;
+	position: relative;
+	width: 60%;
+	width: calc(100% - 280px);
+	margin: auto;
+	margin-top: -100px;
+}
+
+#background {
+	position: absolute;
+	z-index: -2;
+}
+
+/* Post controls */
+.date {
+	position: relative;
+	width: 70px;
+	margin: 0;
+	color:#dfdfdf;
+}
+ 
+.day, .month, .year {
+ 	position: absolute;
+}
+ 
+.day { 
+	font-size: 30px;
+	top: 15px;
+}
+ 
+.month { 
+	top: 0;
+	left: 0;  
+	font-size: 18px;
+}
+ 
+.year { 
+	top: 14px;
+	right: 0;
+	font-size: 20px;
+	rotation: -90deg !important;
+	/* ** Hacks ** */
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);  
+}
+
+.title {
+	margin-left: 70px;
+	padding-bottom: 10px;
+}
+
+/* Orbitals */
+.sun {
+	position: absolute;
+	background-image: url(img/celestial/sun.png);
+	background-size: cover;
+
+	height: 300px;
+	width: 300px;
+}
+
+.page-sun {
+	top: -120px;
+	left: -100px;
+}
+.home-sun {
+	position: fixed;
+	opacity: 0.5;
+	text-align: left;
+	left: 50%;
+	top: 25px;
+	margin-left: -150px;
+}
+
+.star {
+	position: fixed;
+	background-image: url(img/celestial/star.png);
+	background-size: cover;
+
+	height: 3px;
+	width: 3px;
+}
+
+
+.galaxy {
+	position: fixed;
+	background-image: url(img/celestial/galaxy.png);
+	background-size: cover;
+	opacity: 0.4;
+	
+	height: 100px;
+	width: 100px;
+}
+
+
+.nebula {
+	position: fixed;
+	background-image: url(img/celestial/nebula.png);
+	background-size: cover;
+	opacity: 0.4;
+
+	height: 100px;
+	width: 100px;
+}
+
+.planet {
+	float: left;
+	text-align: left;
+	width: 60px;
+	height: 60px;
+}
+
+.earth {
+	height: 55px;
+	width: 55px;
+
+	margin-left: -27.5px;
+	margin-top: -15px;
+}
+.moon {
+	height: 17px;
+	width: 17px;
+
+	margin-left: 40px;
+}
+
+.red {
+	height: 35px;
+	width: 35px;
+
+	margin-left: -17.5px;
+	margin-top: -5px;
+}
+
+.gas {
+	height: 80px;
+	width: 80px;
+
+	margin-left: -40px;
+	margin-top: -28px;
+}
+
+.ring {
+	height: 80px;
+	width: 80px;
+
+	margin-left: -40px;
+	margin-top: -28px;
+}
+
+.cold {
+	height: 40px;
+	width: 40px;
+
+	margin-left: -20px;
+	margin-top: -8px;
+}
+
+/* Menu */
+#menu {
+	margin: 20px;
+	margin-left: 60px;
+	font-size: 22px;
+	list-style: none;
+	text-align:left;
+}
+
+.menu-item {
+	padding-bottom: 50px;
+	display: block;
+	width: 100%;
+	height: 60px;
+	text-align: right;
+}
+
+.menu-link {
+	text-align: right;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+a {
+	color:#9f9f9f;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration: underline overline;
+	color:#bfbfbf;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.aligner {
+	text-align: center;
+	padding-top: 7px;
+	margin: auto;
+}
+
+/*Post formatting*/
+.post {
+	margin: auto;
+	width: 80%;
+	width: calc(100% - 60px);
+	background-color: rgba(0, 0, 0, 0.2);
+	border: solid;
+	border-width: 1px;
+	border-color: #555555;
+	padding: 10px;
+	padding-bottom:25px;
+	margin-bottom: 20px;
+}
+.post:nth-last-child(1) {
+	padding-bottom:10px;
+}
+
+.post > p {
+	margin-bottom: 10px;
+	margin-left: 70px;
+}
+
+#footer {
+	text-align:center;
+	margin-top:14px;
+	padding-bottom: 15px;
+}
+
+#home-footer {
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	top: 100%;
+	margin-top: -190px;
+	opacity: 0.3;
+	z-index: -1;
+}
+
+/* Homepage specifics */
+.quote {
+	margin: auto;
+	font-size: 28px;
+	max-width: 650px;
+	font-style: italic;
+}
+.quote-author {
+	font-size: 18px;
+}
+
+#home-menu {
+	position: fixed;
+	padding-bottom: 50px;
+	display: block;
+	width: 100%;
+	height: 60px;
+	text-align: left;
+	height: 100%;
+	width: 100%;
+}
+
+.home-item {
+	width: 160px;
+	position: absolute;
+	font-size: 24px;
+}
+
+.home-item .planet {
+	margin-top: 4px;
+}
+
+#home-earth {
+	top: 30%;
+	left: 20%;
+}
+
+#home-cold {
+	top: 55%;
+	left: 35%;
+}
+#home-cold .menu-link {
+	margin-left: -185px;
+}
+
+#home-red {
+	top: 40%;
+	left: 45%;
+}
+#home-red .menu-link {
+	margin-left: -30px;
+}
+
+#home-gas {
+	top: 60%;
+	left: 58%;
+}
+#home-ring {
+	top: 47%;
+	left: 80%;
+}
+#home-ring .menu-link {
+	margin-left: -185px;
+}
+
+
+
+/* For smaller screens */
+@media (max-width:925px) {
+	#main {
+		margin-top: 0;
+	}
+
+	.post > p {
+		margin-left : 10px;
+	}
+}
+
+@media(max-height: 650px) {
+	#home-footer {
+		opacity: 0.1;
+	}
+
+	#home-header {
+		top: 10px;
+	}
+
+	#home-menu a.menu-link {
+		color: #dddddd;
+	}
+
+	.home-background .sun {
+		top: -130px;
+	}
+}
+
+@media (min-width:650px) and (max-height:650px) {
+	#home-footer {
+		margin-top: -130px;
+	}
+}
+
+@media (max-width:700px) {
+	#home-footer {
+		opacity: 0.1;
+	}
+
+	#sidebar, #main {
+		margin: 0;
+		float: none;
+		width: 100%;
+	}
+
+	#menu {
+		text-align: center;
+		font-size: 28px;
+		margin: 12px;
+		margin-top: 22px;
+		margin-bottom: 22px;
+	}
+
+	.menu-item {
+		width: 0;
+		height: 0;
+		display: inline;
+		text-align: center;
+	}
+
+	.menu-item:after {
+		content: "- ";
+	}
+
+	.menu-item:last-child:after {
+		content: "";
+	}
+
+	#menu .planet {
+		display: none;
+	}
+
+	h1 {
+		padding: 0;
+		margin: auto;
+		max-width: 600px;
+	}
+	#page-header h1 {
+		padding: 0;
+	}
+
+	#page-header {
+		margin: 0;
+		display: block;
+		position: relative;
+		height: 160px;
+	}
+
+	#home-header {
+		margin-top: -75px;
+	}
+
+	.sun {
+		opacity: 0.5;
+	}
+
+	.home-item {
+		margin-left: -80px;
+	}
+	#home-earth, #home-red, #home-gas {
+		left: 60%;
+	}
+	#home-ring, #home-cold {
+		left: 40%;
+	}
+
+	#home-earth {
+		top: 360px;
+	}
+	#home-red {
+		top: 460px;
+	}
+	#home-gas {
+		top: 560px;
+	}
+	#home-ring {
+		top: 410px;
+	}
+	#home-cold {
+		top:510px;
+	}
+
+}
+
+@media (max-width:700px) and (max-height:650px) {
+	#home-header {
+		top: 0;
+	}
+
+	#home-earth {
+		top: 220px;
+	}
+	#home-red {
+		top: 320px;
+	}
+	#home-gas {
+		top: 420px;
+	}
+	#home-ring {
+		top: 270px;
+	}
+	#home-cold {
+		top:370px;
+	}
+}
