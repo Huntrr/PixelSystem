@@ -112,8 +112,8 @@ http://hunterlightman.com/blankpage.html
 
 
         <div id="home-footer">
-            <p class="quote">"I had better never see a book, than to be warped by its attraction clean out of my own orbit, and made a satellite instead of a system"</p>
-            <p class="quote-author">— Ralph Waldo Emerson, <span class="italic">The American Scholar</span>, 1837</p>
+            <p class="quote">"There is an art to flying, or rather a knack. Its knack lies in learning to throw yourself at the ground and miss."</p>
+            <p class="quote-author">— Douglas Adams, <span class="italic">The Hitchhiker's Guide to the Galaxy</span></p>
         </div>
 
         <?php wp_footer() ?>
